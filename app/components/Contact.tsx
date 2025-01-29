@@ -18,8 +18,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Send a Message</h2>
+    <div className="max-w-2xl mx-auto px-2 sm:px-4">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">Send a Message</h2>
       <motion.form
         onSubmit={handleSubmit}
         className="space-y-4"
@@ -30,12 +30,12 @@ export default function Contact() {
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full h-32 bg-green-900 text-green-400 border border-green-400 rounded p-2"
+          className="w-full h-24 sm:h-32 bg-green-900 text-green-400 border border-green-400 rounded p-2 text-sm sm:text-base"
           placeholder="Type your message here..."
         />
         <motion.button
           type="submit"
-          className="px-4 py-2 bg-green-600 rounded flex items-center"
+          className="px-3 py-1 sm:px-4 sm:py-2 bg-green-600 rounded flex items-center text-sm sm:text-base"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -51,8 +51,8 @@ export default function Contact() {
             exit={{ opacity: 0, y: -50 }}
             className="mt-4 text-center"
           >
-            <p className="text-xl">Message Sent! 🎉</p>
-            <p>XP +100</p>
+            <p className="text-lg sm:text-xl">Message Sent! 🎉</p>
+            <p className="text-sm sm:text-base">XP +100</p>
           </motion.div>
         )}
       </AnimatePresence>

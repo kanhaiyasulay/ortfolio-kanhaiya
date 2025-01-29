@@ -1,19 +1,16 @@
 import { motion } from 'framer-motion'
 import { FaLinkedin, FaGithub, FaHackerrank } from 'react-icons/fa'
-import { SiLeetcode } from "react-icons/si";
 
 export default function ProfileLinks() {
   const links = [
     { icon: FaLinkedin, url: "https://www.linkedin.com/in/yourusername" },
     { icon: FaGithub, url: "https://github.com/yourusername" },
     { icon: FaHackerrank, url: "https://www.hackerrank.com/yourusername" },
-    { icon: SiLeetcode, url: "https://www.hackerrank.com/yourusername" },
-
   ]
 
   return (
     <motion.div
-      className="fixed bottom-4 left-4 flex space-x-4"
+      className="fixed bottom-2 sm:bottom-4 left-2 sm:left-4 flex space-x-2 sm:space-x-4"
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5 }}
@@ -24,7 +21,7 @@ export default function ProfileLinks() {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl hover:text-green-600"
+          className="text-xl sm:text-2xl hover:text-green-600"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
         >

@@ -27,22 +27,22 @@ export default function Education() {
   ]
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Education Skill Tree</h2>
+    <div className="max-w-2xl mx-auto px-2 sm:px-4">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">Education Skill Tree</h2>
       <div className="space-y-4">
         {educationItems.map((item, index) => (
           <motion.div
             key={item.id}
-            className="flex items-center space-x-4 cursor-pointer"
+            className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 cursor-pointer"
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: index * 0.2 }}
             onClick={() => setExpandedItem(expandedItem === item.id ? null : item.id)}
           >
-            <FaGraduationCap className="text-2xl" />
+            <FaGraduationCap className="text-2xl mb-2 sm:mb-0" />
             <div>
               <h3 className="font-bold">{item.title}</h3>
-              <p>{item.year}</p>
+              <p className="text-sm">{item.year}</p>
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ 

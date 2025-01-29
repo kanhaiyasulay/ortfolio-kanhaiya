@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion'
 
-export default function FloatingCharacter() {
+interface FloatingCharacterProps {
+  className?: string
+}
+
+export default function FloatingCharacter({ className = '' }: FloatingCharacterProps) {
   return (
     <motion.div
-      className="fixed bottom-20 right-20 text-4xl"
+      className={`fixed bottom-10 sm:bottom-20 right-10 sm:right-20 text-3xl sm:text-4xl ${className}`}
       animate={{
         y: [0, -20, 0],
       }}

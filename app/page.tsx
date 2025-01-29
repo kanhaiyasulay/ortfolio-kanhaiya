@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import ProfileLinks from './components/ProfileLinks'
 import GameCursor from './components/GameCursor'
 import FloatingCharacter from './components/FloatingCharacter'
+import { FaGamepad } from 'react-icons/fa'
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('education')
@@ -41,7 +42,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-green-400 font-mono p-4 cursor-none">
+    <div className="min-h-screen bg-black text-green-400 font-mono p-2 sm:p-4 cursor-none">
       <GameCursor x={cursorXSpring} y={cursorYSpring} />
       <Header />
       <main className="mt-8">
@@ -56,12 +57,12 @@ export default function Home() {
           {currentSection === 'contact' && <Contact />}
         </motion.div>
       </main>
-      <nav className="mt-8 flex justify-center space-x-4">
+      <nav className="mt-8 flex flex-wrap justify-center gap-2 sm:space-x-4">
         {['education', 'projects', 'skills', 'contact'].map((section) => (
           <motion.button
             key={section}
             onClick={() => setCurrentSection(section)}
-            className={`px-4 py-2 bg-green-800 rounded ${currentSection === section ? 'ring-2 ring-green-400' : ''}`}
+            className={`px-3 py-1 sm:px-4 sm:py-2 bg-green-800 rounded text-sm sm:text-base ${currentSection === section ? 'ring-2 ring-green-400' : ''}`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -70,7 +71,7 @@ export default function Home() {
         ))}
       </nav>
       <ProfileLinks />
-      {showCharacter && <FloatingCharacter />}
+      {showCharacter && <FloatingCharacter className="hidden sm:block" />}
     </div>
   )
 }

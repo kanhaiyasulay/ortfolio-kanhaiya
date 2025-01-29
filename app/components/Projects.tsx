@@ -16,18 +16,18 @@ export default function Projects() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Project Levels</h2>
+    <div className="max-w-2xl mx-auto px-2 sm:px-4">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">Project Levels</h2>
       <div className="space-y-4">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="border border-green-400 p-4 rounded"
+            className="border border-green-400 p-3 sm:p-4 rounded"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: index * 0.2 }}
           >
-            <h3 className="font-bold flex items-center">
+            <h3 className="font-bold flex items-center text-sm sm:text-base">
               <motion.div
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
@@ -37,7 +37,7 @@ export default function Projects() {
               </motion.div>
               Level {index + 1}: {project.title}
             </h3>
-            <p>{project.description}</p>
+            <p className="text-xs sm:text-sm mt-1">{project.description}</p>
           </motion.div>
         ))}
       </div>
@@ -47,8 +47,8 @@ export default function Projects() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <p>Mini-Game Score: {gameScore}</p>
-        <p className="text-sm">Click the stars to increase your score!</p>
+        <p className="text-sm sm:text-base">Mini-Game Score: {gameScore}</p>
+        <p className="text-xs sm:text-sm">Click the stars to increase your score!</p>
       </motion.div>
     </div>
   )
