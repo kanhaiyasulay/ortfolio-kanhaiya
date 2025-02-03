@@ -6,9 +6,28 @@ export default function Projects() {
   const [gameScore, setGameScore] = useState(0)
 
   const projects = [
-    { id: 1, title: "Space Invaders Clone", description: "A modern take on the classic arcade game" },
-    { id: 2, title: "RPG Game Engine", description: "A custom game engine for creating 2D RPGs" },
-    { id: 3, title: "VR Escape Room", description: "An immersive VR escape room experience" },
+    { 
+      id: 1, 
+      title: "Dope Rocket", 
+      description:  <p>
+      A modern take on the classic arcade game. <br />
+      Allows player to move the rocket in 3D world.
+    </p>
+    
+    },
+    { 
+      id: 2,
+      title: "Tech courses",
+      description: <p>A custom ed tech website which allows user to wishlist courses <br/>Also allows to add filters according to their preferences</p> 
+    },
+    { 
+      id: 3, 
+      title: "Cristal World Platformer Game", 
+      description: <p>
+      Platformer game allows player to do various types of movements like - double jump, run, attack, etc. <br />
+      Includes multiple levels as level progresses the game gets more harder
+    </p> 
+    }
   ]
 
   const handleStarClick = () => {

@@ -8,20 +8,21 @@ export default function Education() {
   const educationItems = [
     { 
       id: 1, 
-      title: "B.S. in Computer Science", 
-      year: "2018-2022",
+      title: "Vishwakarma Institute of Information Technology", 
+      cgpa : "8.07",
+      year: "8.07/10 cgpa",
       details: "Focused on game development and computer graphics. Completed projects in Unity and Unreal Engine."
     },
     { 
       id: 2, 
-      title: "Game Development Bootcamp", 
-      year: "2022",
+      title: "Sanjivani Junior College Kopargaon", 
+      year: "80.17%",
       details: "Intensive 12-week program covering advanced game design principles and industry-standard tools."
     },
     { 
       id: 3, 
-      title: "Master's in Game Design", 
-      year: "2023-Present",
+      title: "Shri Sharda English Medium School, Kopargaon", 
+      year: "81.6%",
       details: "Specializing in VR/AR game development and advanced AI for games."
     },
   ]

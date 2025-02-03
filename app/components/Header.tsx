@@ -10,7 +10,7 @@ export default function Header() {
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 300 }}
       >
-        Game Dev Portfolio
+        Kanhaiya Sulay
       </motion.h1>
       <motion.div
         initial={{ scale: 0 }}
